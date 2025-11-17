@@ -40,11 +40,27 @@ type Books ={
   rating : number;
 }
 
-const filterByRating = (array : Books[]) =>{
+const filterByRating = (array : Books[]) : Books[] =>{
   const topBooks =array.filter((item) => item.rating >=4).map((item) =>{
     return {title :item.title, rating: item.rating}
   })
   return topBooks;
+}
+
+
+
+type User = {
+  id : number;
+  name : string;
+  email : string;
+  isActive : boolean;
+}
+
+const filterActiveUsers= (users : User[]): User[]=>{
+  const activeUser = users.filter((user) => user.isActive).map((user) => {
+    return { id: user.id, name: user.name, email: user.email, isActive: user.isActive}
+  })
+  return activeUser;
 }
 
 
