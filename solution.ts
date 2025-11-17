@@ -8,4 +8,13 @@ const formatValue =(value : number | string | boolean) => {
   }
 }
 
-console.log(formatValue(40));
+
+
+const getLength = (input : string | number[] | string[]) => {
+  if( typeof input === 'string'){
+    return input.length
+  }else if(Array.isArray(input)){
+    return input.length;
+  }
+}
+
