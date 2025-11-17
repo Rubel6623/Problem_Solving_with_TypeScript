@@ -34,3 +34,17 @@ class Person {
 }
 
 
+
+type Books ={
+  title : string;
+  rating : number;
+}
+
+const filterByRating = (array : Books[]) =>{
+  const topBooks =array.filter((item) => item.rating >=4).map((item) =>{
+    return {title :item.title, rating: item.rating}
+  })
+  return topBooks;
+}
+
+
