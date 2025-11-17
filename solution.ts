@@ -63,4 +63,22 @@ const filterActiveUsers= (users : User[]): User[]=>{
   return activeUser;
 }
 
+interface Book {
+  title : string;
+  author : string;
+  publishedYear : number;
+  isAvailable : boolean;
+}
 
+const printBookDetails = (book : Book) => {
+  console.log(`title: ${book.title}, Author: ${book.author}, Published: ${book.publishedYear}, Available: ${book.isAvailable? 'Yes': 'No'}`);
+}
+
+const myBook: Book = {
+  title: 'The Great Gatsby',
+  author: 'F. Scott Fitzgerald',
+  publishedYear: 1925,
+  isAvailable: false,
+};
+
+printBookDetails(myBook);
