@@ -4,19 +4,19 @@
 
 * Interface অন্য interface ও type—দুটোকেই extend করতে পারে। Type আরেকটি type বা interface-কে extend করতে পারে কিন্তু সেক্ষেত্রে & intersection ব্যবহার করতে হয় ।
 
-```interface Person {
+interface Person {
   name: string;
 }
 
 interface Student extends Person {
   roll: number;
-}```
+}
 
 
-```type Person = {
+type Person = {
   name: string;
 }
 
 type Student = Person & {
   roll: number;
-}```
+}
