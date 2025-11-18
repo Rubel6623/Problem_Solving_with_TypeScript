@@ -114,3 +114,25 @@ const getUniqueValues = (array1: number[] | string[], array2: number[] | string[
 
 
 
+
+type Cart = {
+  name: string;
+  price : number;
+  quantity : number;
+  discount?: number ;
+}
+
+const  calculateTotalPrice = (array : Cart[]) => {
+
+  const cartSubtotal = array.reduce((subTotal, product) => {
+    const neatPrice = product.price*product.quantity;
+
+    if(product.discount){
+      const discountAmount = neatPrice* (product.discount/100);
+      return subTotal + (neatPrice-discountAmount);
+    }
+    return subTotal+ neatPrice;
+  }, 0);
+  
+  return cartSubtotal;
+}
