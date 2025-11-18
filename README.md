@@ -3,6 +3,8 @@
 # Interface vs Type — মূল পার্থক্য
 
 * Interface অন্য interface ও type—দুটোকেই extend করতে পারে। Type আরেকটি type বা interface-কে extend করতে পারে কিন্তু সেক্ষেত্রে & intersection ব্যবহার করতে হয় ।
+
+
 **Interface**
 ```
 interface Person {
@@ -45,7 +47,7 @@ type Student = Person & {
 
 
 
-##  TypeScript Enums  
+##  TypeScript Enums ## 
 TypeScript-এ **Enum** এমন একটি ফিচার যা একটি সেটের related constant মানগুলোকে পরিষ্কার ও readable উপায়ে সংরক্ষণ করতে সাহায্য করে।  
 এটি বিশেষ করে তখন ব্যবহার করা হয় যখন একটি নির্দিষ্ট তালিকাভুক্ত value সেট ব্যবহার করতে হয়—যেমন: status, roles, directions, categories ইত্যাদি।
 
