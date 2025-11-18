@@ -10,6 +10,7 @@ const formatValue =(value : number | string | boolean) => {
 
 
 
+
 const getLength = (input : string | number[] | string[]) => {
   if( typeof input === 'string'){
     return input.length
@@ -17,6 +18,7 @@ const getLength = (input : string | number[] | string[]) => {
     return input.length;
   }
 }
+
 
 
 
@@ -35,6 +37,7 @@ class Person {
 
 
 
+
 type Books ={
   title : string;
   rating : number;
@@ -46,6 +49,7 @@ const filterByRating = (array : Books[]) : Books[] =>{
   })
   return topBooks;
 }
+
 
 
 
@@ -63,6 +67,9 @@ const filterActiveUsers= (users : User[]): User[]=>{
   return activeUser;
 }
 
+
+
+
 interface Book {
   title : string;
   author : string;
@@ -74,11 +81,33 @@ const printBookDetails = (book : Book) => {
   console.log(`title: ${book.title}, Author: ${book.author}, Published: ${book.publishedYear}, Available: ${book.isAvailable? 'Yes': 'No'}`);
 }
 
-const myBook: Book = {
-  title: 'The Great Gatsby',
-  author: 'F. Scott Fitzgerald',
-  publishedYear: 1925,
-  isAvailable: false,
-};
 
-printBookDetails(myBook);
+
+
+const getUniqueValues = (array1: number[] | string[], array2: number[] | string[]) => {
+
+  let uniqueArray : (number[] | string[]) = [];
+  let currentIndex=0;  
+
+  for(let i=0; i<array1.length; i++){
+    uniqueArray[currentIndex]=array1[i]
+    currentIndex++;
+    }
+
+    for(let i=0; i < array2.length; i++){
+      let available = false;
+
+      for(let j = 0; j < currentIndex; j++){
+        if(uniqueArray[j] === array2[i]){
+          available = true;
+          break;
+        }
+      }
+
+      if(!available){        
+        uniqueArray[currentIndex]= array2[i];
+        currentIndex++;      
+      }
+    }
+  return uniqueArray;
+}
