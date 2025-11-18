@@ -3,8 +3,8 @@
 # Interface vs Type — মূল পার্থক্য
 
 * Interface অন্য interface ও type—দুটোকেই extend করতে পারে। Type আরেকটি type বা interface-কে extend করতে পারে কিন্তু সেক্ষেত্রে & intersection ব্যবহার করতে হয় ।
+**Interface**
 ```
-<!-- Interface -->
 interface Person {
   name: string;
 }
@@ -12,8 +12,10 @@ interface Person {
 interface Student extends Person {
   roll: number;
 }
+```
 
-<!-- Type -->
+**Type**
+```
 type Person = {
   name: string;
 }
@@ -24,7 +26,7 @@ type Student = Person & {
 
 ```
 ## ব্যবহার ঃ 
- ** Interface ব্যবহার :
+ **Interface ব্যবহার :**
 
 - Object-এর structure define করার ক্ষেত্রে
 
@@ -32,7 +34,7 @@ type Student = Person & {
 
 - Declaration merging এর সুবিধার জন্য
 
-** Type ব্যবহার :
+**Type ব্যবহার :** 
 
 - Primitive type এর জন্য দরকার (string, number ইত্যাদি)
 
