@@ -47,7 +47,7 @@ type Student = Person & {
 
 
 
-##  TypeScript Enums ## 
+#  TypeScript Enums 
 TypeScript-এ **Enum** এমন একটি ফিচার যা একটি সেটের related constant মানগুলোকে পরিষ্কার ও readable উপায়ে সংরক্ষণ করতে সাহায্য করে।  
 এটি বিশেষ করে তখন ব্যবহার করা হয় যখন একটি নির্দিষ্ট তালিকাভুক্ত value সেট ব্যবহার করতে হয়—যেমন: status, roles, directions, categories ইত্যাদি।
 

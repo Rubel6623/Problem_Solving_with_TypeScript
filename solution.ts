@@ -6,6 +6,9 @@ const formatValue =(value : number | string | boolean) => {
   }else if(typeof value === 'boolean'){
     return value = !value;
   }
+  else{
+    throw new Error('Please provide number or string, or boolean type data');
+  }
 }
 
 
@@ -16,6 +19,9 @@ const getLength = (input : string | number[] | string[]) => {
     return input.length
   }else if(Array.isArray(input)){
     return input.length;
+  }
+  else{
+    throw new Error(`Please provide a string or number type array `);
   }
 }
 
